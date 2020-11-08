@@ -11,12 +11,7 @@ class BinaryTree {
   }
   maxDepth(root) {
     if (root === null) return 0;
-    else {
-      const lDepth = this.maxDepth(root.left);
-      const rDepth = this.maxDepth(root.right);
-      if (lDepth > rDepth) return lDepth + 1;
-      else return rDepth + 1;
-    }
+    return 1 + Math.max(this.maxDepth(root.left), this.maxDepth(root.right));
   }
 }
 

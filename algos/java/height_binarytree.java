@@ -14,14 +14,7 @@ class BinaryTree {
   int maxDepth(Node node) {
     if (node == null)
       return 0;
-    else {
-      int lDepth = maxDepth(node.left);
-      int rDepth = maxDepth(node.right);
-      if (lDepth > rDepth)
-        return lDepth + 1;
-      else
-        return rDepth + 1;
-    }
+    return 1+ Math.max(maxDepth(node.left),maxDepth(node.right));
   }
 
   public static void main(String[] args) {
